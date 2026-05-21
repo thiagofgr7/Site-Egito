@@ -1,0 +1,233 @@
+/* Opa Junior, você deve ter percebido que tem bastante coisa que você não ensinou no código. */
+/* O meu código original pro site tava uma gambiarra gigantesca, então acabei pedindo ajuda pra um primo meu que manja mais de html */
+/* o que eu não conhecia eu anotei no codigo mesmo, então tem varias anotações no meio do css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.principal {
+    background-color: #272727;
+    color: white;
+    padding: 40px 0;
+}
+
+.conteudoprincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Adapta o bagulho pra tela pequena */
+}
+
+header h1 { 
+    font-size: clamp(2rem, 8vw, 4rem); /* Medida mais responsíva, melhor que px, mas ainda não entendi muito bem como usa */
+    letter-spacing: 10px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Nav*/
+nav {
+    background-color: #1a1a1a;
+    position: sticky; /* Fica no topo fixo, a tag seguinte (top,bottom,left,right) determina onde vai ficar fixo */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #c0392b; 
+}
+
+/* Main */
+main {
+    padding: 40px 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+}
+.intro-2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro-2 h2 {
+    font-size: 2.5rem;
+}
+
+/* Grid de Cards */
+.grid-cards {
+    display: grid; /* Ajusta o negocio sózinho em colunas */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px; /* gap entre as colunas */
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px); /*Faz uma animaçãozinha pra cima*/
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Não distorce a imagem */
+}
+
+.card span {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Texto */
+.texto{
+    padding: 10px;
+    text-align: justify;
+}
+.texto p{
+    margin-bottom: 1.5rem;
+}
+.texto h3{
+    margin-top: 20px;
+}
+.texto ul{
+    list-style-position: inside;
+}
+.texto ul li{
+    padding-left: 1.5rem;
+    font-style: italic;
+}
+.texto h3{
+    text-transform: uppercase;
+    color: #c0392b;
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Galeria e Imagens */
+.grid-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: left;
+    margin-top: 1.5rem;
+}
+.galeria{
+    display: flex;
+    flex-direction: column; /* isso joga o texto pra baixo */
+    align-items: center;
+}
+.galeria img{
+    width: 245px;
+    border-radius: 10px;
+}
+.galeria img:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+.galeria span{
+    margin-top: 8px;
+    text-align: center;
+}
+
+.img-historia {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 10px;
+}
+.img-historia:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+.img-culinaria{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+}
+.img-culinaria:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    position: sticky; /* Fica embaixo */
+    bottom: 0;
+    z-index: 1000;
+}
+footer a{
+    text-decoration: none;
+    color: #888;
+}
